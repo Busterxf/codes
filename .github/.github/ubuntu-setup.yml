@@ -1,0 +1,14 @@
+name: Ubuntu Setup
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: sudo apt-get update && sudo apt-get install -y <your-packages>
